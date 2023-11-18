@@ -1,0 +1,34 @@
+---
+import {projects} from '../consts';
+import ProjectCard from '../components/ProjectCard.astro';
+import Portfolio from '../layouts/Portfolio.astro';
+---
+
+<Portfolio active='projects'>
+	<div class='main-container'>
+		<main class='section-main glass'>
+			<h1 class='page-title'>Projects</h1>
+			<div class='projects-container'>
+				{
+					projects.map((proy) => (
+						<ProjectCard
+							title={proy.name}
+							img={proy.img}
+							link={proy.link}
+							color={proy.color}
+							stack={proy.stack}
+						/>
+					))
+				}
+			</div>
+		</main>
+	</div>
+	<div class='bg-images'>
+		<img
+			src='/portfolio/pista_iso_recta.png'
+			alt='Athletics track'
+			class='bg-track-1'
+		/>
+		<img src='/portfolio/grafo.png' alt='Graph' class='bg-graph' />
+	</div>
+</Portfolio>

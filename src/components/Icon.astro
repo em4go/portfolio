@@ -1,0 +1,33 @@
+---
+import Home from './icons/Home.astro';
+import Blog from './icons/Blog.astro';
+import Curriculum from './icons/Curriculum.astro';
+import Github from './icons/Github.astro';
+import Linkedin from './icons/Linkedin.astro';
+import Person from './icons/Person.astro';
+import Bulb from './icons/Bulb.astro';
+import ExternalLink from './icons/ExternalLink.astro';
+
+const iconMap = {
+	home: Home,
+	blog: Blog,
+	curriculum: Curriculum,
+	github: Github,
+	linkedin: Linkedin,
+	person: Person,
+	bulb: Bulb,
+	'external-link': ExternalLink,
+};
+
+const IconComponent = iconMap[Astro.props.name] ?? '<span />';
+---
+
+<svg
+	xmlns='http://www.w3.org/2000/svg'
+	width='32'
+	height='32'
+	viewBox='0 0 32 32'
+	fill='none'
+>
+	<IconComponent />
+</svg>

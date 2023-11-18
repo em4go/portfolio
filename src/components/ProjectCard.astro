@@ -1,0 +1,79 @@
+---
+import Icon from './Icon.astro';
+import Logo from './Logo.astro';
+const {title, link, img} = Astro.props;
+const color = Astro.props.color || 'white';
+const stack = Astro.props.stack || [];
+---
+
+<div class='project-card'>
+	<a href={link} target='_blank'>
+		<img src={img} alt='Project image' />
+		<div class='icon-container'>
+			<Icon name='external-link' />
+		</div>
+		<div class='stack-container'>
+			{stack.map((item) => <Logo name={item} />)}
+		</div>
+	</a>
+	<p class='project-name'>{title}</p>
+</div>
+
+<style define:vars={{color}}>
+	.project-card {
+		border-radius: 5px;
+		background: linear-gradient(
+			180deg,
+			var(--color) -7.07%,
+			#2e3440 45.21%,
+			#1f2229 73.17%
+		);
+		padding: 10px;
+	}
+	img {
+		width: 100%;
+		border-radius: 5px;
+		transition: filter 0.2s ease-in-out;
+	}
+
+	a {
+		position: relative;
+		display: block;
+	}
+
+	a:hover > img {
+		filter: opacity(0.5) brightness(0.4);
+	}
+
+	a:hover > .icon-container {
+		opacity: 1;
+	}
+	a:hover > .stack-container {
+		opacity: 1;
+	}
+
+	.icon-container {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		opacity: 0;
+	}
+	.stack-container {
+		position: absolute;
+		bottom: 5px;
+		width: 100%;
+		opacity: 0;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+
+		transition: 0.2s ease-in-out;
+	}
+	.project-name {
+		text-align: center;
+		font-size: 16px;
+	}
+</style>

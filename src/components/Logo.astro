@@ -1,0 +1,38 @@
+---
+import Python from './logos/Python.astro';
+import Css from './logos/Css.astro';
+import Html from './logos/Html.astro';
+import JavaScript from './logos/JavaScript.astro';
+import Docker from './logos/Docker.astro';
+import FastApi from './logos/FastApi.astro';
+import Flask from './logos/Flask.astro';
+import Htmx from './logos/Htmx.astro';
+import PouchDb from './logos/PouchDb.astro';
+import R from './logos/R.astro';
+import ScikitLearn from './logos/ScikitLearn.astro';
+import Sqlite from './logos/Sqlite.astro';
+import Linux from './logos/Linux.astro';
+import Svelte from './logos/Svelte.astro';
+import Figma from './logos/Figma.astro';
+
+const logoMap = {
+	python: Python,
+	css: Css,
+	html: Html,
+	javascript: JavaScript,
+	docker: Docker,
+	fastapi: FastApi,
+	flask: Flask,
+	htmx: Htmx,
+	pouchdb: PouchDb,
+	r: R,
+	scikitlearn: ScikitLearn,
+	sqlite: Sqlite,
+	linux: Linux,
+	svelte: Svelte,
+	figma: Figma,
+};
+const IconComponent = logoMap[Astro.props.name] ?? '<span />';
+---
+
+<IconComponent />

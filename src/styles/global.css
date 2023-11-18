@@ -1,0 +1,277 @@
+body {
+	background-color: #2e3440;
+	font-family: 'Nunito Sans', sans-serif;
+	color: #eceff4;
+}
+* {
+	box-sizing: border-box;
+}
+
+li {
+	list-style: none;
+}
+
+svg {
+	max-width: 100%;
+}
+
+.hero-main {
+	width: 100%;
+	height: 100vh;
+	height: 100svh;
+
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	overflow: hidden;
+	position: relative;
+
+	grid-area: main;
+}
+
+.main-section {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	padding: 0 3em;
+	gap: 3em;
+	/* transform: translateX(-5vw);
+	transform: translateX(-8svw); */
+}
+
+.main-text {
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	justify-content: center;
+	gap: 10px;
+}
+
+.hero-track-img {
+	position: absolute;
+	bottom: calc(-300px + 10vw);
+	left: 61%;
+	height: 120%;
+	clip-path: inset(0 0 17% 0);
+	z-index: -1;
+	filter: blur(2px);
+}
+
+.avatar-img {
+	width: 340px;
+	clip-path: circle(40% at 50% 50%);
+}
+
+.hero-title {
+	font-size: 48px;
+	color: #cb6ce6;
+	font-weight: 900;
+	margin: 0;
+}
+
+.hero-subtitle {
+	font-size: 32px;
+	font-weight: 700;
+	margin: 0;
+}
+
+.link-icon {
+	color: #a1a1a1;
+}
+
+.active-icon {
+	color: #cb6ce6;
+}
+
+.glass {
+	background-color: rgba(30, 30, 30, 0.4);
+	backdrop-filter: blur(6px);
+}
+
+.screen-size {
+	max-width: 100vw;
+	max-width: 100svw;
+	height: 100vh;
+	height: 100svh;
+}
+
+.container {
+	position: relative;
+	display: grid;
+	grid-template-columns: 10% 90%;
+	grid-template-rows: 1fr;
+	gap: 0px 0px;
+	grid-template-areas: 'nav main';
+	max-height: 100%;
+}
+
+.nav-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	grid-area: nav;
+	position: relative;
+	height: 100vh;
+	height: 100svh;
+	width: 100%;
+}
+
+.nav {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	padding: 0.5rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	width: fit-content;
+	height: fit-content;
+	max-height: 100%;
+	border-radius: 6px;
+}
+
+.main-container {
+	padding: 2% 0;
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	grid-area: main;
+}
+
+.section-main {
+	width: 90%;
+	min-height: 100%;
+	border-radius: 15px;
+	padding: 4% 8%;
+	display: flex;
+	flex-direction: column;
+}
+
+.projects-container {
+	display: grid;
+	place-items: center;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	gap: 30px;
+	flex-grow: 1;
+}
+
+.page-title {
+	font-size: 36px;
+	color: #cb6ce6;
+	font-weight: 700;
+	margin-top: 0;
+}
+
+.bg-images {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	overflow: hidden;
+}
+
+.bg-images img {
+	max-width: 100%;
+	max-height: 100%;
+	position: fixed;
+}
+
+.bg-track-1 {
+	bottom: -90px;
+	right: 4%;
+	width: 85vh;
+	width: 85svh;
+}
+
+.bg-graph {
+	top: calc(-40vh + 100px);
+	top: calc(-40svh + 100px);
+	left: 20%;
+	width: max(400px, 40%);
+	transform: rotate(45deg);
+}
+
+.about-content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-grow: 1;
+	flex-wrap: wrap-reverse;
+	gap: 15px;
+}
+
+.text-container {
+	max-width: max(500px, 60%);
+	font-size: 20px;
+	text-wrap: wrap;
+	line-height: 1.3;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	justify-content: center;
+	gap: 30px;
+}
+
+.about-image {
+	clip-path: circle(62% at 50% 41%);
+	width: min(275px, 70%);
+}
+
+.bg-toroid {
+	bottom: -110px;
+	left: -15%;
+	width: 85vh;
+	width: 85svh;
+	transform: rotate(-14deg);
+}
+
+.bg-track-2 {
+	top: calc(-40vh + 100px);
+	top: -3%;
+	right: -13%;
+	width: max(600px, 55%);
+}
+
+.text-purple {
+	color: #cb6ce6;
+}
+
+.text-yellow {
+	color: #e5c07b;
+}
+
+.text-blue {
+	color: #23c2ee;
+}
+
+.text-green {
+	color: #1dc984;
+}
+
+@media (max-width: 640px) {
+	.nav {
+		/* display: none; */
+		position: sticky;
+		flex-direction: row;
+		padding: 0.5rem 2rem;
+	}
+	.nav-container {
+		height: auto;
+		position: fixed;
+		z-index: 10;
+		bottom: 10px;
+	}
+	.container {
+		display: block;
+	}
+	.main-container {
+		justify-content: center;
+		padding-bottom: 4em;
+	}
+}

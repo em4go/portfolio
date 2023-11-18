@@ -1,0 +1,47 @@
+---
+import Portfolio from '../layouts/Portfolio.astro';
+---
+
+<Portfolio active='about'>
+	<div class='main-container'>
+		<main class='section-main glass'>
+			<h1 class='page-title'>About me</h1>
+			<div class='about-content'>
+				<ul class='text-container'>
+					<li>
+						📊 Data Science <span class='text-green'>student</span> at
+						Universitat Politècnica de València, currently at 2nd year
+					</li>
+					<li>
+						🌐 Web Development <span class='text-yellow'>enthusiast</span>,
+						lover of discovering new technologies
+					</li>
+					<li>
+						📖 Self-taught <span class='text-blue'>programmer</span> since 2020
+					</li>
+					<li>
+						🏃🏽‍♂️ Track and field <span class='text-purple'>athlete</span> at Club
+						Atletismo Albacete
+					</li>
+				</ul>
+				<img
+					src='/portfolio/cara_ernesto.png'
+					alt='Profile picture'
+					class='about-image'
+				/>
+			</div>
+		</main>
+		<div class='bg-images'>
+			<img
+				src='/portfolio/toroid.png'
+				alt='3D toroid ilustration'
+				class='bg-toroid'
+			/>
+			<img
+				src='/portfolio/full_track_iso.png'
+				alt='Athletics track isometric ilustration'
+				class='bg-track-2'
+			/>
+		</div>
+	</div>
+</Portfolio>

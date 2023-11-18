@@ -1,0 +1,50 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import {SITE_TITLE, SITE_DESCRIPTION} from '../consts';
+import Navbar from '../components/Navbar.astro';
+import Icon from '../components/Icon.astro';
+const {active} = Astro.props;
+---
+
+<!doctype html>
+<html lang='en'>
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<div class='container screen-size'>
+			<div class='nav-container'>
+				<Navbar>
+					<a
+						class:list={['link-icon', {'active-icon': active === 'landing'}]}
+						href='/portfolio'><Icon name='home' /></a
+					>
+					<a
+						class:list={['link-icon', {'active-icon': active === 'about'}]}
+						href='/portfolio/about'><Icon name='person' /></a
+					>
+					<a
+						class:list={['link-icon', {'active-icon': active === 'projects'}]}
+						href='/portfolio/projects'><Icon name='bulb' /></a
+					>
+					<a
+						class:list={['link-icon', {'active-icon': active === 'blog'}]}
+						href='/portfolio/blog'><Icon name='blog' /></a
+					>
+					<a class='link-icon' target='_blank' href='/portfolio/cv'
+						><Icon name='curriculum' /></a
+					>
+					<a
+						class='link-icon'
+						target='_blank'
+						href='https://linkedin.com/in/ernestomg'><Icon name='linkedin' /></a
+					>
+					<a class='link-icon' target='_blank' href='https://github.com/em4go'
+						><Icon name='github' /></a
+					>
+				</Navbar>
+			</div>
+			<slot />
+		</div>
+	</body>
+</html>
