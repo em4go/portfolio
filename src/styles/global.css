@@ -34,8 +34,8 @@ svg {
 	align-items: center;
 	justify-content: space-around;
 	flex-wrap: wrap;
-	padding: 0 3em;
 	gap: 3em;
+	text-align: center;
 	/* transform: translateX(-5vw);
 	transform: translateX(-8svw); */
 }
