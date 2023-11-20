@@ -4,6 +4,8 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
+import Navbar from '../components/Navbar.astro';
+import Icon from '../components/Icon.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
@@ -14,11 +16,11 @@ const {title, description, pubDate, updatedDate, heroImage} = Astro.props;
 	<head>
 		<BaseHead title={title} description={description} />
 		<style>
-			main {
+			/* main {
 				width: calc(100% - 2em);
 				max-width: 100%;
 				margin: 0;
-			}
+			} */
 			.hero-image {
 				width: 100%;
 			}
@@ -51,39 +53,80 @@ const {title, description, pubDate, updatedDate, heroImage} = Astro.props;
 			.last-updated-on {
 				font-style: italic;
 			}
+
+			/* .blog__nav-container {
+				position: fixed;
+				top: 50%;
+				left: 10px;
+				transform: translateY(-50%);
+				width: 100%;
+			} */
+			article {
+				width: 100%;
+			}
 		</style>
 	</head>
 
 	<body>
-		<Header />
-		<main>
-			<article>
-				<div class='hero-image'>
-					{
-						heroImage && (
-							<img width={1020} height={510} src={heroImage} alt='' />
-						)
-					}
-				</div>
-				<div class='prose'>
-					<div class='title'>
-						<div class='date'>
-							<FormattedDate date={pubDate} />
-							{
-								updatedDate && (
-									<div class='last-updated-on'>
-										Last updated on <FormattedDate date={updatedDate} />
-									</div>
-								)
-							}
-						</div>
-						<h1>{title}</h1>
-						<hr />
+		<div class='container'>
+			<div class='nav-container'>
+				<Navbar>
+					<a class='link-icon' href='/portfolio'><Icon name='home' /></a>
+					<a class='link-icon' href='/portfolio/about'><Icon name='person' /></a
+					>
+					<a class='link-icon' href='/portfolio/projects'
+						><Icon name='bulb' /></a
+					>
+					<a class='link-icon active-icon' href='/portfolio/blog'
+						><Icon name='blog' /></a
+					>
+					<a class='link-icon' target='_blank' href='/portfolio/cv'
+						><Icon name='curriculum' /></a
+					>
+					<a
+						class='link-icon'
+						target='_blank'
+						href='https://linkedin.com/in/ernestomg'><Icon name='linkedin' /></a
+					>
+					<a class='link-icon' target='_blank' href='https://github.com/em4go'
+						><Icon name='github' /></a
+					>
+				</Navbar>
+			</div>
+			<main class='main-container'>
+				<article>
+					<div class='hero-image'>
+						{
+							heroImage && (
+								<img
+									width={1020}
+									height={510}
+									src={`/portfolio/${heroImage}`}
+									alt=''
+								/>
+							)
+						}
 					</div>
-					<slot />
-				</div>
-			</article>
-		</main>
+					<div class='prose'>
+						<div class='title'>
+							<div class='date'>
+								<FormattedDate date={pubDate} />
+								{
+									updatedDate && (
+										<div class='last-updated-on'>
+											Last updated on <FormattedDate date={updatedDate} />
+										</div>
+									)
+								}
+							</div>
+							<h1>{title}</h1>
+							<hr />
+						</div>
+						<slot />
+					</div>
+				</article>
+			</main>
+		</div>
 		<Footer />
 	</body>
 </html>

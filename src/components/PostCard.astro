@@ -1,0 +1,53 @@
+---
+import FormattedDate from './FormattedDate.astro';
+const {title, description, pubDate, image, link} = Astro.props;
+---
+
+<a class='post-card' href={link}>
+	<picture>
+		<img src={`/portfolio/${image}`} alt='Hero image' />
+	</picture>
+	<div class='card__text-container'>
+		<p class='card__title'>{title}</p>
+		<div class='darker'>
+			<p class='card__description'>{description}</p>
+			<FormattedDate date={pubDate} />
+		</div>
+	</div>
+</a>
+
+<style>
+	a {
+		color: white;
+		text-decoration: none;
+	}
+
+	.card__title {
+		font-size: 20px;
+		font-weight: 600;
+		opacity: 1;
+	}
+	.darker {
+		opacity: 0.8;
+	}
+
+	p {
+		margin: 0.3rem 0 0.3rem 0;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+	picture {
+		width: 200px;
+		height: 200px;
+		flex-grow: 0;
+		flex-shrink: 0;
+	}
+	img {
+		object-fit: cover;
+		height: 100%;
+		width: 100%;
+		border-radius: 10px 0 0 10px;
+	}
+</style>

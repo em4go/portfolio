@@ -4,13 +4,30 @@ import Portfolio from '../layouts/Portfolio.astro';
 
 <Portfolio active='landing'>
 	<main class='hero-main'>
-		<img src='/portfolio/pista_start.png' alt='Track' class='hero-track-img' />
 		<div class='main-section'>
-			<img src='/portfolio/dibujo_pixar.png' alt='Avatar' class='avatar-img' />
+			<div class='landing-img-container'>
+				<img
+					src='/portfolio/avatar-bg.svg'
+					alt='Blob avatar bg'
+					class='avatar-bg'
+				/>
+				<img
+					src='/portfolio/dibujo_pixar.png'
+					alt='Avatar'
+					class='avatar-img'
+				/>
+			</div>
 			<div class='main-text'>
 				<h1 class='hero-title'>Ernesto Martínez</h1>
-				<p class='hero-subtitle'>Data Developer</p>
+				<p class='hero-subtitle'>Data Scientist</p>
 			</div>
 		</div>
 	</main>
+	<div class='bg-images'>
+		<img
+			src='/portfolio/corner-landing.png'
+			alt='Blue corner image'
+			class='landing-bg-img'
+		/>
+	</div>
 </Portfolio>
