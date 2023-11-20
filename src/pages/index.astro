@@ -1,33 +1,72 @@
 ---
 import Portfolio from '../layouts/Portfolio.astro';
+import ProjectSection from '../components/ProjectSection.astro';
 ---
 
 <Portfolio active='landing'>
-	<main class='hero-main'>
-		<div class='main-section'>
+	<div class='content-container'>
+		<header class='header' id='landing'>
 			<div class='landing-img-container'>
 				<img
-					src='/portfolio/avatar-bg.svg'
+					src='/portfolio/avatar-bg2.svg'
 					alt='Blob avatar bg'
-					class='avatar-bg'
+					class='landing__img-bg'
 				/>
 				<img
-					src='/portfolio/dibujo_pixar.png'
+					src='/portfolio/personal-photo.png'
 					alt='Avatar'
-					class='avatar-img'
+					class='personal-img'
 				/>
 			</div>
 			<div class='main-text'>
 				<h1 class='hero-title'>Ernesto Martínez</h1>
 				<p class='hero-subtitle'>Data Scientist</p>
+				<a class='button-1' href='#about'>See more</a>
 			</div>
-		</div>
-	</main>
-	<div class='bg-images'>
+		</header>
 		<img
 			src='/portfolio/corner-landing.png'
 			alt='Blue corner image'
 			class='landing-bg-img'
 		/>
+
+		<!-- About -->
+		<section class='about-section' id='about'>
+			<h1 class='page-title'>About me</h1>
+			<div class='about-content'>
+				<ul class='text-container'>
+					<li>
+						📊 Data Science <span class='text-green'>student</span> at
+						Universitat Politècnica de València, currently at 2nd year
+					</li>
+					<li>
+						🌐 Web Development <span class='text-yellow'>enthusiast</span>,
+						lover of discovering new technologies
+					</li>
+					<li>
+						📖 Self-taught <span class='text-blue'>programmer</span> since 2020
+					</li>
+					<li>
+						🏃🏽‍♂️ Track and field <span class='text-purple'>athlete</span> at Club
+						Atletismo Albacete
+					</li>
+				</ul>
+				<div class='about__img-container'>
+					<img
+						src='/portfolio/avatar-bg.svg'
+						alt='Blob avatar bg'
+						class='avatar-bg'
+					/>
+					<img
+						src='/portfolio/dibujo_pixar.png'
+						alt='Avatar'
+						class='avatar-img'
+					/>
+				</div>
+			</div>
+		</section>
+		<ProjectSection />
 	</div>
 </Portfolio>
+
+<style></style>

@@ -1,13 +1,12 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import {SITE_TITLE, SITE_DESCRIPTION} from '../consts';
-// import Navbar from '../components/Navbar.astro';
 import Navbar from '../components/Navbar.astro';
 import Icon from '../components/Icon.astro';
 const {active} = Astro.props;
 ---
 
-<!-- bind:class="{ active: activeSection === 'inicio' }" --><!doctype html>
+<!doctype html>
 <html lang='en'>
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
@@ -18,15 +17,15 @@ const {active} = Astro.props;
 				<Navbar>
 					<a
 						class:list={['link-icon', {'active-icon': active === 'landing'}]}
-						href='#landing'><Icon name='home' /></a
+						href='/portfolio#landing'><Icon name='home' /></a
 					>
 					<a
 						class:list={['link-icon', {'active-icon': active === 'about'}]}
-						href='#about'><Icon name='person' /></a
+						href='/portfolio#about'><Icon name='person' /></a
 					>
 					<a
 						class:list={['link-icon', {'active-icon': active === 'projects'}]}
-						href='#projects'><Icon name='bulb' /></a
+						href='/portfolio#projects'><Icon name='bulb' /></a
 					>
 					<a
 						class:list={['link-icon', {'active-icon': active === 'blog'}]}
