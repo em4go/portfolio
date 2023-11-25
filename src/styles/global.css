@@ -185,7 +185,32 @@ svg {
 
 .link-icon {
 	color: #a1a1a1;
+	transition: 0.2s ease;
+	position: relative;
 }
+
+.link-icon:hover {
+	color: #cb6ce6;
+	transform: scale(1.2);
+}
+
+/* .link-icon::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 100%;
+	background-color: #cb6ce6;
+	transform: scale(0);
+	transition: transform 0.2s ease;
+	z-index: -1;
+}
+
+.link-icon:hover::after {
+	transform: scale(1);
+} */
 
 .active-icon {
 	color: #cb6ce6;
@@ -462,6 +487,13 @@ svg {
 	.main-container {
 		justify-content: center;
 		padding-bottom: 4em;
+	}
+
+	.main-text {
+		text-align: center;
+	}
+	.main-text .button-1 {
+		margin: auto;
 	}
 
 	.post-card picture {
