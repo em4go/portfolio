@@ -15,22 +15,22 @@ const {active} = Astro.props;
 		<div class='container screen-size'>
 			<div class='nav-container'>
 				<Navbar>
-					<a
-						class:list={['link-icon', {'active-icon': active === 'landing'}]}
-						href='/portfolio#landing'><Icon name='home' /></a
+					<a class='link-icon' href='/portfolio'>
+						<Icon name='home' />
+						<span class='icon-text'>Landing</span>
+					</a>
+					<a class='link-icon' href='/portfolio#about'
+						><Icon name='person' />
+						<span class='icon-text'>About me</span></a
 					>
-					<a
-						class:list={['link-icon', {'active-icon': active === 'about'}]}
-						href='/portfolio#about'><Icon name='person' /></a
-					>
-					<a
-						class:list={['link-icon', {'active-icon': active === 'projects'}]}
-						href='/portfolio#projects'><Icon name='bulb' /></a
-					>
-					<a
-						class:list={['link-icon', {'active-icon': active === 'blog'}]}
-						href='/portfolio/blog'><Icon name='blog' /></a
-					>
+					<a class='link-icon' href='/portfolio#projects'
+						><Icon name='bulb' />
+						<span class='icon-text'>Projects</span>
+					</a>
+					<a class='link-icon active-icon' href='/portfolio/blog'
+						><Icon name='blog' />
+						<span class='icon-text'>Blog</span>
+					</a>
 					<a
 						class='link-icon'
 						target='_blank'
@@ -38,15 +38,20 @@ const {active} = Astro.props;
 						download
 					>
 						<Icon name='curriculum' />
+						<span class='icon-text'>Download CV</span>
 					</a>
 					<a
 						class='link-icon'
 						target='_blank'
-						href='https://linkedin.com/in/ernestomg'><Icon name='linkedin' /></a
+						href='https://linkedin.com/in/ernestomg'
 					>
-					<a class='link-icon' target='_blank' href='https://github.com/em4go'
-						><Icon name='github' /></a
-					>
+						<Icon name='linkedin' />
+						<span class='icon-text'>LinkedIn</span>
+					</a>
+					<a class='link-icon' target='_blank' href='https://github.com/em4go'>
+						<Icon name='github' />
+						<span class='icon-text'>GitHub</span>
+					</a>
 				</Navbar>
 			</div>
 			<slot />

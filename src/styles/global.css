@@ -194,6 +194,25 @@ svg {
 	transform: scale(1.2);
 }
 
+.link-icon:hover > .icon-text {
+	color: white;
+	transform: scale(0.8);
+}
+
+.icon-text {
+	top: 3px;
+	left: 30px;
+	font-size: 1rem;
+	position: absolute;
+	padding: 5px 5px;
+	background-color: #cb6ce6;
+	border-radius: 100px;
+	color: white;
+	transform: scale(0) translateY(-50%);
+	text-wrap: nowrap;
+	margin: 0;
+}
+
 /* .link-icon::after {
 	content: '';
 	position: absolute;
@@ -247,6 +266,7 @@ svg {
 	height: 100vh;
 	height: 100svh;
 	width: 100%;
+	z-index: 10;
 }
 
 .nav {
