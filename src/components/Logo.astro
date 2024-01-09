@@ -14,6 +14,7 @@ import Sqlite from './logos/Sqlite.astro';
 import Linux from './logos/Linux.astro';
 import Svelte from './logos/Svelte.astro';
 import Figma from './logos/Figma.astro';
+import Streamlit from './logos/Streamlit.astro';
 
 const logoMap = {
 	python: Python,
@@ -31,6 +32,7 @@ const logoMap = {
 	linux: Linux,
 	svelte: Svelte,
 	figma: Figma,
+	streamlit: Streamlit,
 };
 const IconComponent = logoMap[Astro.props.name] ?? '<span />';
 ---

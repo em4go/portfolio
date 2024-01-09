@@ -23,6 +23,8 @@ export const projects = [
 		name: 'Under-18 athletics ranking analysis',
 		link: 'https://github.com/em4go/analisis-ranking-atletismo-2023',
 		img: '/portfolio/rank_u18_analysis.png',
+		color: '#F7DF1E',
+		stack: ['python', 'pandas', 'streamlit', 'seaborn', 'numpy'],
 	},
 	{
 		name: 'Project 3',
