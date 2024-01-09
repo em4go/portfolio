@@ -16,6 +16,7 @@ import Svelte from './logos/Svelte.astro';
 import Figma from './logos/Figma.astro';
 import Streamlit from './logos/Streamlit.astro';
 import Plotly from './logos/Plotly.astro';
+import Pandas from './logos/Pandas.astro';
 
 const logoMap = {
 	python: Python,
@@ -35,6 +36,7 @@ const logoMap = {
 	figma: Figma,
 	streamlit: Streamlit,
 	plotly: Plotly,
+	pandas: Pandas,
 };
 const IconComponent = logoMap[Astro.props.name] ?? '<span />';
 ---
