@@ -20,9 +20,9 @@ export const projects = [
 		stack: ['javascript', 'svelte', 'pouchdb', 'css', 'html'],
 	},
 	{
-		name: 'Project 3',
-		link: 'https://github.com',
-		img: '/portfolio/filmanin.png',
+		name: 'Under-18 athletics ranking analysis',
+		link: 'https://github.com/em4go/analisis-ranking-atletismo-2023',
+		img: '/portfolio/rank_u18_analysis.png',
 	},
 	{
 		name: 'Project 3',
