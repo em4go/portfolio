@@ -1,18 +1,11 @@
 ---
+import Seo from '../components/Seo.astro';
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
 import '../styles/normalize.css';
 import '../styles/global.css';
 
-interface Props {
-	title: string;
-	description: string;
-	image?: string;
-}
-
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-
-const {title, description, image = '/blog-placeholder-1.jpg'} = Astro.props;
+const {title, description, image, robots} = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -20,33 +13,26 @@ const {title, description, image = '/blog-placeholder-1.jpg'} = Astro.props;
 <meta name='viewport' content='width=device-width,initial-scale=1' />
 <link rel='icon' type='image/svg+xml' href='favicon-dark-theme.svg' />
 <meta name='generator' content={Astro.generator} />
+<title>Ernesto Martínez - Data Scientist and Web Developer</title>
+<meta name='author' content='Ernesto Martínez' />
+<meta
+	name='description'
+	content='Ernesto Martínez - Data Scientist and Web Developer. A Data Science student at Universitat Politècnica de València with a passion for web development and a self-taught programmer since 2020. Explore my projects in movie recommendation, Pokémon card detection, athletics ranking analysis, and workout timer app. Connect with me on LinkedIn and GitHub.'
+/>
+
+<Seo
+	title={title}
+	description={description}
+	url={Astro.url}
+	image={image}
+	robots={robots}
+/>
 
 <!-- Font preloads -->
-<link rel='preconnect' href='https://fonts.googleapis.com' />
+<link rel='
+	preconnect' href='https://fonts.googleapis.com' />
 <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
 <link
 	href='https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700;800;900&display=swap'
 	rel='stylesheet'
 />
-
-<!-- Canonical URL -->
-<link rel='canonical' href={canonicalURL} />
-
-<!-- Primary Meta Tags -->
-<title>{title}</title>
-<meta name='title' content={title} />
-<meta name='description' content={description} />
-
-<!-- Open Graph / Facebook -->
-<meta property='og:type' content='website' />
-<meta property='og:url' content={Astro.url} />
-<meta property='og:title' content={title} />
-<meta property='og:description' content={description} />
-<meta property='og:image' content={new URL(image, Astro.url)} />
-
-<!-- Twitter -->
-<meta property='twitter:card' content='summary_large_image' />
-<meta property='twitter:url' content={Astro.url} />
-<meta property='twitter:title' content={title} />
-<meta property='twitter:description' content={description} />
-<meta property='twitter:image' content={new URL(image, Astro.url)} />

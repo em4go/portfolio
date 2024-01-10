@@ -1,16 +1,22 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import {SITE_TITLE, SITE_DESCRIPTION} from '../consts';
 // import Navbar from '../components/Navbar.astro';
 import Navbar from '../components/Navbar.astro';
 import Icon from '../components/Icon.astro';
-const {active} = Astro.props;
+import type {imageConfig} from 'astro:assets';
+const {
+	active,
+	title = 'Ernesto Martínez - Data Scientists and Web Developer',
+	description = '',
+	image,
+	robots,
+} = Astro.props;
 ---
 
 <!-- bind:class="{ active: activeSection === 'inicio' }" --><!doctype html>
 <html lang='en'>
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead {title} {description} {image} {robots} />
 	</head>
 	<body>
 		<div class='container screen-size'>
@@ -49,10 +55,9 @@ const {active} = Astro.props;
 						class='link-icon'
 						target='_blank'
 						href='CV_Ernesto_Martinez_Gomez.pdf'
-						download
 					>
 						<Icon name='curriculum' />
-						<span class='icon-text'>Download CV</span>
+						<span class='icon-text'> CV</span>
 					</a>
 					<a
 						class='link-icon'
