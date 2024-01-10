@@ -21,7 +21,7 @@ const posts = (await getCollection('blog')).sort(
 							description={post.data.description}
 							image={post.data.heroImage}
 							pubDate={post.data.pubDate}
-							link={`/portfolio/blog/${post.slug}`}
+							link={`blog/${post.slug}`}
 						/>
 					))
 				}
@@ -29,10 +29,6 @@ const posts = (await getCollection('blog')).sort(
 		</div>
 	</div>
 	<div class='bg-images'>
-		<img
-			src='/portfolio/abstract-lines1.png'
-			alt='Abstract lines'
-			class='bg-blog-lines'
-		/>
+		<img src='abstract-lines1.png' alt='Abstract lines' class='bg-blog-lines' />
 	</div>
 </BlogLanding>

@@ -91,14 +91,14 @@ const {title, description, pubDate, updatedDate, heroImage} = Astro.props;
 						<span class='icon-text'>Projects</span>
 					</a>
 					<!-- Blog section coming soon -->
-					<!-- <a class='link-icon active-icon' href='/portfolio/blog'
+					<!-- <a class='link-icon active-icon' href='blog'
 						><Icon name='blog' />
 						<span class='icon-text'>Blog</span>
 					</a> -->
 					<a
 						class='link-icon'
 						target='_blank'
-						href='/portfolio/CV_Ernesto_Martinez_Gomez.pdf'
+						href='CV_Ernesto_Martinez_Gomez.pdf'
 						download
 					>
 						<Icon name='curriculum' />
@@ -123,7 +123,7 @@ const {title, description, pubDate, updatedDate, heroImage} = Astro.props;
 					<div class='article-content'>
 						<header>
 							<div class='blog__hero-img'>
-								{heroImage && <img src={`/portfolio/${heroImage}`} alt='' />}
+								{heroImage && <img src={`${heroImage}`} alt='' />}
 							</div>
 							<div class='blog__title-container'>
 								<h1>{title}</h1>

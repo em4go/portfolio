@@ -5,7 +5,7 @@ const {title, description, pubDate, image, link} = Astro.props;
 
 <a class='post-card' href={link}>
 	<picture>
-		<img src={`/portfolio/${image}`} alt='Hero image' />
+		<img src={`${image}`} alt='Hero image' />
 	</picture>
 	<div class='card__text-container'>
 		<p class='card__title'>{title}</p>

@@ -77,10 +77,10 @@ const {title, description, pubDate, updatedDate, heroImage} = Astro.props;
 						><Icon name='bulb' /></a
 					>
 					<!-- Blog section coming soon -->
-					<!-- <a class='link-icon active-icon' href='/portfolio/blog'
+					<!-- <a class='link-icon active-icon' href='blog'
 						><Icon name='blog' /></a
 					> -->
-					<a class='link-icon' target='_blank' href='/portfolio/cv'
+					<a class='link-icon' target='_blank' href='cv'
 						><Icon name='curriculum' /></a
 					>
 					<a
@@ -98,12 +98,7 @@ const {title, description, pubDate, updatedDate, heroImage} = Astro.props;
 					<div class='hero-image'>
 						{
 							heroImage && (
-								<img
-									width={1020}
-									height={510}
-									src={`/portfolio/${heroImage}`}
-									alt=''
-								/>
+								<img width={1020} height={510} src={`${heroImage}`} alt='' />
 							)
 						}
 					</div>
