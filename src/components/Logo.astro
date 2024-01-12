@@ -17,6 +17,7 @@ import Figma from './logos/Figma.astro';
 import Streamlit from './logos/Streamlit.astro';
 import Plotly from './logos/Plotly.astro';
 import Pandas from './logos/Pandas.astro';
+import Opencv from './logos/Opencv.astro';
 
 const logoMap = {
 	python: Python,
@@ -37,6 +38,7 @@ const logoMap = {
 	streamlit: Streamlit,
 	plotly: Plotly,
 	pandas: Pandas,
+	opencv: Opencv,
 };
 const IconComponent = logoMap[Astro.props.name] ?? '<span />';
 ---

@@ -10,10 +10,17 @@ export const projects = [
 		stack: ['python', 'scikitlearn', 'fastapi', 'htmx', 'docker'],
 	},
 	{
+		name: 'PokeCard TCG detector',
+		link: 'https://github.com/em4go/PokeCard-TCG-detector',
+		img: 'preview_pokecard_detector.png',
+		stack: ['python', 'pandas', 'opencv', 'htmx', 'flask'],
+		color: '#FFC331',
+	},
+	{
 		name: 'Under-18 athletics ranking analysis',
 		link: 'https://github.com/em4go/analisis-ranking-atletismo-2023',
 		img: 'rank_u18_analysis.png',
-		color: '#F7DF1E',
+		color: '#23C2EE',
 		stack: ['python', 'pandas', 'streamlit', 'plotly'],
 	},
 	{
