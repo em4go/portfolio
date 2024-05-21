@@ -3,6 +3,20 @@
 
 export const projects = [
 	{
+		name: 'Valencia transport analysis',
+		link: 'https://github.com/em4go/transport-analysis-proy-II',
+		img: 'metro_project.webp',
+		color: '#21e6c1',
+		stack: ['r', 'python', 'docker'],
+	},
+	{
+		name: 'Business description classification',
+		link: 'https://github.com/Zrive/zrive-ds-1q24-industry-classification',
+		img: 'naics_project.webp',
+		color: '#D79EE7',
+		stack: ['python', 'scikitlearn', 'pytorch'],
+	},
+	{
 		name: 'Movie recommendation web',
 		link: 'https://github.com/em4go/filmanin_proy',
 		img: 'filmanin.webp',
