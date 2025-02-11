@@ -19,6 +19,7 @@ import Plotly from './logos/Plotly.astro';
 import Pandas from './logos/Pandas.astro';
 import Opencv from './logos/Opencv.astro';
 import PyTorch from './logos/PyTorch.astro';
+import Shiny from './logos/Shiny.astro';
 
 const logoMap = {
 	python: Python,
@@ -41,6 +42,7 @@ const logoMap = {
 	pandas: Pandas,
 	opencv: Opencv,
 	pytorch: PyTorch,
+	shiny: Shiny,
 };
 const IconComponent = logoMap[Astro.props.name] ?? '<span />';
 ---
