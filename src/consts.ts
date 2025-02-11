@@ -3,6 +3,13 @@
 
 export const projects = [
 	{
+		name: 'Tourism interactive dashboard',
+		link: 'https://github.com/andreucs/vis-proy',
+		img: 'vis_project.webp',
+		color: '#449f9f',
+		stack: ['r', 'plotly', 'shiny'],
+	},
+	{
 		name: 'Valencia transport analysis',
 		link: 'https://github.com/em4go/transport-analysis-proy-II',
 		img: 'metro_project.webp',
